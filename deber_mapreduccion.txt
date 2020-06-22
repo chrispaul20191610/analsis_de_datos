@@ -1,0 +1,112 @@
+Canciones json
+
+{
+ "titulo":"buttercup",
+ "autor":"jack stauber",
+ "genero":"desconocido",
+ "duracion":"3:30",
+ "tamaño":"6MB"
+}
+
+{
+ "titulo":"amores viene",
+ "autor":"kamari",
+ "genero":"san juanito",
+ "duracion":"6:30",
+ "tamaño":"5.5MB"
+}
+
+{
+ "titulo":"fall out boy",
+ "autor":"centuries",
+ "genero":"trap",
+ "duracion":"4:20",
+ "tamaño":"4.3MB"
+}
+
+{
+ "titulo":"memories",
+ "autor":"maroon5",
+ "genero":"pop",
+ "duracion":"3:15",
+ "tamaño":"5MB"
+}
+
+{
+ "titulo":"perfect",
+ "autor":"ed sheran",
+ "genero":"balada",
+ "duracion":"4:40",
+ "tamaño":"6MB"
+}
+
+{
+ "titulo":"sugar",
+ "autor":"maroon5",
+ "genero":"pop",
+ "duracion":"5:00",
+ "tamaño":"5MB"
+}
+
+{
+ "titulo":"inmortal",
+ "autor":"romeo santos",
+ "genero":"bachata",
+ "duracion":"4:30",
+ "tamaño":"5.6MB"
+}
+
+{
+ "titulo":"animals",
+ "autor":"maroon5",
+ "genero":"pop",
+ "duracion":"4:40",
+ "tamaño":"5.2MB"
+
+}
+
+{
+ "titulo":"one more nigth",
+ "autor":"maroon5",
+ "genero":"pop",
+ "duracion":"3:40",
+ "tamaño":"6MB"
+}
+
+{
+ "titulo":"y rozar contigo",
+ "autor":"robe iniesta",
+ "genero":"rock alternmativo",
+ "duracion":"5:00",
+ "tamaño":"7MB"
+}
+
+{
+ "titulo":"nana cruel",
+ "autor":"robe iniesta",
+ "genero":"rock alternativo",
+ "duracion":"6:40",
+ "tamaño":"8MB"
+}
+
+//busqueda titulos de los json
+
+function(doc) 
+ {if (doc.title) 
+ { emit(doc.title); 
+} } 
+buqeuda palabras 
+function(doc) 
+
+{  if(doc.title.indexOf("pop") > -1)
+{   emit(doc.title); }}
+busqeuda palabras especificas 
+function(doc) 
+{  if(doc.title.indexOf("bachata") > -1)
+{   emit("bachata",1); }}
+
+function(doc) 
+ { if(doc.autor)
+{ for (var autor in doc.autor)
+ {emit(doc.autor[autor]);
+ } }}
